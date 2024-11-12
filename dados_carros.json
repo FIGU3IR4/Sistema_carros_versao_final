@@ -19,21 +19,7 @@
         "ano": "2016",
         "cor": "Preto",
         "valor": 350
-    },
-    "movida": {
-        "modelo": "Creta",
-        "marca": "Hyundai",
-        "tipo": "SUV",
-        "ano": "2023",
-        "cor": "Prata",
-        "valor": 165
-    },
-    "JS car": {
-        "modelo": "Argo",
-        "marca": "Fiat",
-        "tipo": "Hatch",
-        "ano": "2020",
-        "cor": "Preto",
-        "valor": 200
+    
+   
     }
 }

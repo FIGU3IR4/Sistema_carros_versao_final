@@ -774,18 +774,22 @@ def main():
                     escolha_carro = input('Escolha o carro desejado: ').strip()
                     os.system('cls')
 
-                    
-                    data_retirada = input('Digite a data de retirada (dd/mm/aaaa): ')
-                    data_devolucao = input('Digite a data de devolução (dd/mm/aaaa): ')
+                    dados_carro_escolhido = dados_carros.get(escolha_carro)
+                    if dados_carro_escolhido:
+                        valor_carro = dados_carro_escolhido.get('valor', 0)  # Valor específico do carro escolhido
 
-                    dias_aluguel = calcular_dias(data_retirada, data_devolucao)     
                     
-                    valor_total= dias_aluguel*valor
+                        data_retirada = input('Digite a data de retirada (dd/mm/aaaa): ')
+                        data_devolucao = input('Digite a data de devolução (dd/mm/aaaa): ')
 
-                    print(f"\nResumo do aluguel:\nCarro: {escolha_carro}\nLocadora: {escolha_locadora}\n"
-                         f"Data de Retirada: {data_retirada}\nData de Devolução: {data_devolucao}\n"
-                         f"Duração: {dias_aluguel} dias\nValor Total: R${valor_total:.2f}")
-                    print("\nObrigado por usar nosso sistema! Esperamos vê-lo novamente em breve.\n")
+                        dias_aluguel = calcular_dias(data_retirada, data_devolucao)     
+                        
+                        valor_total= dias_aluguel*valor_carro
+
+                        print(f"\nResumo do aluguel:\nCarro: {escolha_carro}\nLocadora: {escolha_locadora}\n"
+                            f"Data de Retirada: {data_retirada}\nData de Devolução: {data_devolucao}\n"
+                            f"Duração: {dias_aluguel} dias\nValor Total: R${valor_total:.2f}")
+                        print("\nObrigado por usar nosso sistema! Esperamos vê-lo novamente em breve.\n")
 
 
 
