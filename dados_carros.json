@@ -20,14 +20,6 @@
         "cor": "Preto",
         "valor": 350
     },
-    "JS car": {
-        "modelo": "Corola",
-        "marca": "Toyota",
-        "tipo": "Sedan",
-        "ano": "2019",
-        "cor": "Azul",
-        "valor": 320
-    },
     "Celta": {
         "marca": "Chevrolet",
         "tipo": "Hatch",

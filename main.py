@@ -34,10 +34,6 @@ def salvar_locadora(dados_locadoras, arquivo):
     with open(arquivo, 'w') as f:
         json.dump(dados_locadoras, f, indent=4)
     print(cor.VERDE+"LOCADORA CADASTRADA COM SUCESSO!")
-    
-    #LOCADORA 
-def erroSenhaUsuario ():
-    print (cor.VERMELHO+"USUARIO OU SENHA INCORRETOS!")
 
 #LISTAR LOCADORA FUNÇÃO
 def listar_locadora():
@@ -195,11 +191,6 @@ def listar_clientes():
             print(f"  CNH: {info['cnh']}")
             print("=" * 50)
 
-
-
-
-
-
 # Função para APAGAR os dados do Administrador   DELETE
 def apagar_adm():
     apagar = input("Digite o nome do Administrador a ser apagado: ").strip()  # Remove espaços em branco
@@ -294,13 +285,11 @@ def apagar_usuario():
         else:
             print(cor.VERMELHO+f"Cliente '{apagar}' não encontrado.")
 
-
 # Carregar os dados existentes 
 dados_clientes = carregar_dados('dados_clientes.json')
 dados_adm = carregar_dados('dados_administradores.json')
 dados_locadoras = carregar_dados('dados_locadora.json')
 dados_carros = carregar_dados('dados_carros.json')
-
 
 #menu principal
 def menuPrincipal():
@@ -309,8 +298,6 @@ def menuPrincipal():
     print(cor.AMARELO+'=================================================')
     print(cor.AMARELO+'\n1 - ADMINISTRADOR\n2 - LOCADORA\n3 - CLIENTE\n4 - SAIR')
     
-
-
 #menu Secundario 
 def exibir_menu():
     
@@ -324,15 +311,13 @@ def exibir_menu():
 
 def cadastro_cliente():
     print("Bem-vindo ao sistema de cadastro!\n")
-    
-    
+        
     nome_cliente = input("Digite seu nome completo: ").strip()
     cpf_cliente = input("Digite seu CPF (apenas números): ").strip()
     nascimento_cliente = input("Digite sua data de nascimento (DD/MM/AAAA): ").strip()
     numero_cliente = input("Digite seu número para contato: ").strip()
     cnh_cliente = input("Digite o número de sua CNH (Caso tenha): ").strip()
-    
- 
+     
     if nome_cliente in dados_clientes:
         print(cor.MAGENTA+f"O cliente {nome_cliente} já está cadastrado!")
     else:
@@ -353,7 +338,16 @@ def calcular_dias(data_retirada, data_devolucao):
     dias = (data_devolucao - data_retirada).days
     return dias
 
+def cadastroSucesso ():
+    print (cor.VERDE+"CADASTRO REALIZADOS COM SUCESSO!")
 
+def erroSenhaUsuario ():
+    print (cor.VERMELHO+"USUARIO OU SENHA INCORRETOS!")
+
+def opcaoInvalida ():
+    print(cor.VERMELHO+" OPÇÃO INVÁLIDA. TENTE NOVAMENTE!")
+
+#INICIO DO CODIGO
 def main():
 
     while True:
@@ -361,8 +355,7 @@ def main():
         menuPrincipal()
         entrada_inicial = int(input('\nDigite a opção desejada: '))
         os.system('cls')
-    
-    
+        
         match(entrada_inicial):
             case 1:
                 while True:
@@ -448,15 +441,13 @@ def main():
                                                 }
                                                     os.system('cls')
                                                     salvar_dados(dados_locadoras, 'dados_locadora.json')
-                                                    print(cor.VERDE+'LOCADORA CADASTRADA COM SUCESSO')
+                                                    cadastroSucesso ()
 
                                                     exibir_menu_adm_locadora()
                                                     entrada_secundaria= int(input("Digite a opção desejada:  "))
-                                                    
-                                                    
+                                                                                 
                                                 case 2:
                                                     listar_locadora()
-                                                
                                                     
                                                 case 3:
                                                     
@@ -485,7 +476,7 @@ def main():
                                                         'senha_locadora': senha_locadora,
                                                         'contato_locadora': contato_locadora,
                                                         'endereco': endereco_locadora
-        }
+                                                    }
         
                                                         # Salvar os dados no arquivo JSON
                                                        with open('dados_locadora.json', 'w') as salvar_dados:
@@ -497,8 +488,6 @@ def main():
                                                         print(f"Locadora '{atualizar}' não encontrado.")
                                                     
                                                 case 4:
-                                                    
-                                                    
                                                     apagar = input("Digite o nome da locadora a ser apagado: ").strip()  # Remove espaços em branco
 
                                                     with open('dados_locadora.json', 'r') as apagar_dados:
@@ -519,8 +508,7 @@ def main():
                                                        print("LOCADORA APAGADO COM SUCESSO")
                                                      else:
                                                           print(f"Cliente '{apagar}' não encontrado.")
-                                                        
-                                                 
+                                                                 
                                                 case 5:
                                                  os.system('cls')
                                                  print('FEATURE EM DESENVOLVIMENTO')
@@ -530,7 +518,6 @@ def main():
                                                  print('VOLTANDO AO MENU PRINCIPAL')
                                                  break 
                                         
-                                    
                                     case 3:
                                         while True:
                                             
@@ -581,13 +568,13 @@ def main():
                                                  break
                                 
                                                 case __:
-                                                 print("OPÇÃO INVÁLIDA. TENTE NOVAMENTE!")
+                                                 opcaoInvalida ()
                                     
                                     case 4:
                                         print("VOLTANDO...")   
                                         break     
                      else:
-                         print(cor.VERMELHO + "SENHA OU USUARIO INCORRETOS")
+                         erroSenhaUsuario ()
                          break
                          
                         
@@ -596,7 +583,7 @@ def main():
                              
                 
                   else:
-                     print(cor.VERMELHO+ "VOLTANDO AO MENU ANTERIOR")
+                     print("VOLTANDO AO MENU ANTERIOR")
                      break
             
             case 2:
@@ -666,6 +653,8 @@ def main():
                                 elif (opc_carros == 6):
                                     print ('Programa encerrado ...')
                                     break
+                                else:
+                                    opcaoInvalida ()
                         
                             else:
                                 erroSenhaUsuario ()
@@ -704,8 +693,7 @@ def main():
                         
                     # OPÇÃO INVALIDA
                     else:
-                        os.system('cls')
-                        print("OPÇÃO INVALIDA")
+                        opcaoInvalida ()
                         break
                             
             case 3:
@@ -765,7 +753,6 @@ def main():
                         print("\nObrigado por usar nosso sistema! Esperamos vê-lo novamente em breve.\n")
 
 
-
                                         
                     break
                       
@@ -775,18 +762,10 @@ def main():
                 break
             
             case __:
-                print(cor.VERMELHO+" OPÇÃO INVÁLIDA. TENTE NOVAMENTE!")
+                opcaoInvalida ()
                 
                         
 
-                        
-                    
-                        
-                        
-        
-    
-    
-    
     
 if __name__ == "__main__":
     main()
