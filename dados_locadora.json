@@ -1,0 +1,15 @@
+{
+    "JS car": {
+        "login_locadora": "jscar01",
+        "codigo_locadora": "03",
+        "senha_locadora": "12345",
+        "contato_locadora": "81987445862",
+        "endereco_locadora": "Avenida Dom Juan, 1054"
+    },
+    "Jordan car": {
+        "codigo_locadora": "02",
+        "senha_locadora": "12345",
+        "contato_locadora": "81 975668421",
+        "endereco_locadora": "Avenida Maria Irene, 1458"
+    }
+}

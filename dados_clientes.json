@@ -1,0 +1,46 @@
+{
+    "JS car": {
+        "login_locadora": "jscar01",
+        "codigo_locadora": "03",
+        "senha_locadora": "12345",
+        "contato_locadora": "81987445862",
+        "endereco_locadora": "Avenida Dom Juan, 1054"
+    },
+    "SP car": {
+        "login_locadora": "spcar04",
+        "codigo_locadora": "04",
+        "senha_locadora": "12345",
+        "contato_locadora": "11975882644",
+        "endereco_locadora": "Av Paulista, 2054"
+    },
+    "Fabio Reis": {
+        "cpf": "4587754826",
+        "nascimento": "15/04/2002",
+        "numero": "81 954872216",
+        "cnh": "586477559"
+    },
+    "pedro": {
+        "cpf": "037493483",
+        "nascimento": "15/10/2024",
+        "numero": "346874638",
+        "cnh": "3463684628"
+    },
+    "pedro soares": {
+        "cpf": "456",
+        "nascimento": "15/10/2003",
+        "numero": "123",
+        "cnh": "123"
+    },
+    "leandro": {
+        "cpf": "123",
+        "nascimento": "15/10/2003",
+        "numero": "123",
+        "cnh": "09"
+    },
+    "Victor Figueira": {
+        "cpf": "12345070480",
+        "nascimento": "11/12",
+        "numero": "/2",
+        "cnh": "00"
+    }
+}

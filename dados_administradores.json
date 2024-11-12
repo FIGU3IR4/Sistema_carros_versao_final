@@ -1,0 +1,62 @@
+{
+    "Digite o login do Administrador": {
+        "nome": "Digite o nome do Administrador",
+        "senha": "Digite senha do Administrador"
+    },
+    "Wesleyfigueira": {
+        "nome": "Wesley",
+        "senha": "12345"
+    },
+    "allan": {
+        "nome": "allan souza filho",
+        "senha": "12345"
+    },
+    "nino": {
+        "nome": "wandelson",
+        "senha": "123456"
+    },
+    "fabio": {
+        "nome": "fabio",
+        "senha": "1234"
+    },
+    "wesleyfigueira": {
+        "nome": "wesley",
+        "senha": "12345"
+    },
+    "everaldo": {
+        "nome": "everaldo fran\u00e7a",
+        "senha": "12345"
+    },
+    "gabriel": {
+        "nome": "gabriel guerra",
+        "senha": "12345"
+    },
+    "neymar": {
+        "nome": "neymar",
+        "senha": "12345"
+    },
+    "tuanny": {
+        "nome": "tuanny aquino davila",
+        "senha": "106020"
+    },
+    "Teste": {
+        "nome": "Teste",
+        "senha": "Teste"
+    },
+    "teste 1": {
+        "nome": "teste 1",
+        "senha": "teste 1"
+    },
+    "henrique": {
+        "nome": "henrique luiz",
+        "senha": "12345"
+    },
+    "pedro": {
+        "nome": "arthur",
+        "senha": "2222"
+    },
+    "figu3ir4": {
+        "nome": "112003",
+        "senha": "112003"
+    }
+}
