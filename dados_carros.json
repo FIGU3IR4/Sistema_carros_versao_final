@@ -19,7 +19,34 @@
         "ano": "2016",
         "cor": "Preto",
         "valor": 350
-    
-   
+    },
+    "JS car": {
+        "modelo": "Corola",
+        "marca": "Toyota",
+        "tipo": "Sedan",
+        "ano": "2019",
+        "cor": "Azul",
+        "valor": 320
+    },
+    "Celta": {
+        "marca": "Chevrolet",
+        "tipo": "Hatch",
+        "ano": "2014",
+        "cor": "Vermelho",
+        "valor": 120
+    },
+    "Up": {
+        "marca": "Volkswagen",
+        "tipo": "Hatch",
+        "ano": "2020",
+        "cor": "Verde",
+        "valor": 160
+    },
+    "Corola": {
+        "marca": "Toyota",
+        "tipo": "SEdan",
+        "ano": "2021",
+        "cor": "Preto",
+        "valor": 310
     }
 }
