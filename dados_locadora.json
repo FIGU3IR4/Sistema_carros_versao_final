@@ -11,5 +11,10 @@
         "senha_locadora": "12345",
         "contato_locadora": "81 975668421",
         "endereco_locadora": "Avenida Maria Irene, 1458"
+    },
+    "Fig big loca car": {
+        "senha_locadora": "12345",
+        "contato_locadora": "9090",
+        "endereco_locadora": "rua padre maria 123"
     }
 }
