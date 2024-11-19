@@ -595,6 +595,7 @@ def main():
                     print ('=' * 50)
 
                     # CADASTRAR LOCADORA   
+                    
                     if(locadora_entrada==1):
                         while True:
                             nome_locadora = input('Digite o nome da locadora: \n')
